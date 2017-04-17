@@ -1,0 +1,30 @@
+<% if(header) { %>
+<section class="section">
+  <h2 class="section-title">
+    搞笑视频
+  </h2>
+  <div id="videos-wrapper" class="video-list">
+<% } %>
+    <ul class="media-list">
+      <% videos.forEach((v, i) => { %>
+        <% const isBrand = (i === 0 && !noBrand); %>
+        <li class="media-item-wrapper <%=isBrand ? 'brand' : ''%>">
+          <div class="media-item">
+            <a href="<%=v.pageUrl %>"
+               data-src="/images/poster/<%=v.image %>"
+               class="lazy">
+              <img src="/images/placeholder.png" alt="<%=v.title %>">
+            </a>
+            <div class="video-duration"><%=v.duration %></div>
+            <div class="media-desc"><%=v.title %></div>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+<% if(header) { %>
+  </div>
+  <div class="load-more" data-type="video">
+    加载更多
+  </div>
+</section>
+<% } %>

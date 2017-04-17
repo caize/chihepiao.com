@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv='Content-Type' content='Type=text/html; charset=utf-8'>
+    <meta name="description" content="吃喝飘，一个分享精彩、搞笑、有内涵的GIF动图、妹子图、段子、冷笑话的网站，让你刷起来根本停不下来，怎么刷都刷不完。"/>
+    <meta property="wb:webmaster" content="eb77f34c9e224226" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
+    <link href="<%=assets.main.css %>" type="text/css" rel="stylesheet" />
+    <title> <%=title %> | 搞笑视频，搞笑GIF动图，极品有内涵的妹子图，段子，冷笑话</title>
+  </head>
+  <body>
+    <header id="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="http://wx1.sinaimg.cn/square/5fc9bc8bly1fdbgqkcreej205y06odg2.jpg" alt="chihepiao.com">
+          </a>
+        </div>
+        <h1>吃喝飘</h1>
+        <div class="sub">
+          搞笑视频、精彩GIF动图，极品、耐看的妹子，怎么刷都刷不完……
+        </div>
+      </div>
+    </header>
+    <nav id="site-nav" class="close">
+      <a href="#" class="toggle-menu"><i></i><i></i><i></i></a>
+      <div class="container clear-fix">
+        <a href="/" class="nav-item <%=menu === 'home' ? 'active' : '' %>">首页</a>
+        <a href="/v.html" class="nav-item <%=menu === 'video' ? 'active' : '' %>">搞笑视频</a>
+        <a href="/d.html" class="nav-item <%=menu === 'gif' ? 'active' : '' %>">精彩动图</a>
+        <a href="/g.html" class="nav-item <%=menu === 'girl' ? 'active' : '' %>">极品妹子</a>
+        <a href="/about.html" class="nav-item <%=menu === 'about' ? 'active' : '' %>">关于本站</a>
+      </div>
+    </nav>
+    <div class="container clear-fix" id="content">
+      <div id="main">
+        <%- body %>
+      </div>
+    </div>
+    <footer id="site-footer">
+      <div>本站所有资源来源于网络，如侵犯您的合法权益，请联系：admin@chihepiao.com</div>
+      <div>&copy;<%=new Date().getFullYear() %></div>
+    </footer>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="<%=assets.main.js %>"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-88966660-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9354316166591873",
+        enable_page_level_ads: true
+      });
+    </script>
+  </body>
+</html>

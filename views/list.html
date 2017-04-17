@@ -1,0 +1,11 @@
+<% if (type === 'girl') { %>
+  <%-include('./partials/girls.html', {images: girlImages, noBrand, header: true})%>
+<% } %>
+
+<% if (type === 'gif') { %>
+  <%-include('./partials/gifs.html', {images: gifImages, noBrand, header: true}) %>
+<% } %>
+
+<% if (type === 'video') { %>
+  <%-include('./partials/videos.html', {videos, noBrand, header: true})%>
+<% } %>

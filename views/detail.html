@@ -1,0 +1,70 @@
+<% if(type === 'v') { %>
+  <section class="section clear-fix">
+    <div class="video-detail-view">
+      <div class="video-player-wrapper">
+        <iframe width="100%" height="100%" src="<%=media.video %>" frameborder="0"></iframe>
+      </div>
+      <div class="video-desc"><%=media.title %></div>
+    </div>
+    <div class="video-side video-list">
+      <ul class="media-list">
+        <% sideVideos.forEach((v, i) => { %>
+          <li class="media-item-wrapper">
+            <div class="media-item">
+              <a href="<%=v.pageUrl %>"
+                 data-src="/images/poster/<%=v.image %>"
+                 class="lazy">
+                <img src="/images/placeholder.png" alt="<%=v.title %>">
+              </a>
+              <div class="video-duration"><%=v.duration %></div>
+              <div class="media-desc"><%=v.title %></div>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+      <a href="<%=media.nextPageUrl %>" class="next-video-btn">随便换个视频看 >></a>
+    </div>
+  </section>
+<% }else{ %>
+  <section class="section clear-fix">
+    <div class="detail-view">
+      <div class="detail-tip">
+        点击图片换一张
+      </div>
+      <% if(type === 'd') { %>
+        <a href="<%=media.nextPageUrl%>">
+          <img
+              class="gif-thumb"
+              data-src="<%=media.url %>"
+              src="<%=media.url.replace('large', 'thumb300') %>"
+              alt="GIF"
+          >
+        </a>
+        <div class="img-desc"><%=media.text %></div>
+        <div class="loading">正在加载动画...</div>
+      <% } else { %>
+        <a href="<%=media.nextPageUrl%>">
+          <img src="<%=media.url %>" alt="">
+        </a>
+      <% } %>
+    </div>
+  </section>
+<% } %>
+
+<% if(type === 'v') { %>
+  <%-include('./partials/videos.html', { videos, noBrand: true, header: true }) %>
+  <%-include('./partials/gifs.html', { images: gifImages, noBrand: true, header: true }) %>
+  <%-include('./partials/girls.html', { images: girlImages, noBrand: true, header: true })%>
+<% } %>
+
+<% if(type === 'd') { %>
+  <%-include('./partials/gifs.html', { images: gifImages, noBrand: true, header: true }) %>
+  <%-include('./partials/videos.html', { videos, noBrand: true, header: true }) %>
+  <%-include('./partials/girls.html', { images: girlImages, noBrand: true, header: true })%>
+<% } %>
+
+<% if(type === 'g') { %>
+  <%-include('./partials/girls.html', { images: girlImages, noBrand: true, header: true })%>
+  <%-include('./partials/gifs.html', { images: gifImages, noBrand: true, header: true }) %>
+  <%-include('./partials/videos.html', { videos, noBrand: true, header: true }) %>
+<% } %>

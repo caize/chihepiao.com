@@ -1,0 +1,7 @@
+[assets/**.js]
+indent_style = space
+indent_size = 2
+
+[assets/**.less]
+indent_style = space
+indent_size = 2

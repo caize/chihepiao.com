@@ -1,0 +1,33 @@
+<% if(header) { %>
+<section class="section">
+  <h2 class="section-title">
+    精彩动图
+  </h2>
+  <div id="gifs-wrapper">
+<% } %>
+    <ul class="media-list">
+      <% images.forEach((img, i) => { %>
+        <% const isBrand = (i === 0 && !noBrand); %>
+        <% const thumbImg = img.url.replace('large', 'thumb300'); %>
+        <li class="media-item-wrapper <%=isBrand ? 'brand' : ''%>">
+          <div class="media-item">
+            <a href="<%=img.pageUrl %>"
+               data-src="<%=thumbImg %>"
+               class="lazy">
+              <img
+                src="/images/square.png"
+                alt="<%=img.text %>"
+              />
+            </a>
+            <div class="media-desc"><%=img.text %></div>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+<% if(header) { %>
+  </div>
+  <div class="load-more" data-type="gif">
+    加载更多
+  </div>
+</section>
+<% } %>
