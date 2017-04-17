@@ -1,4 +1,4 @@
-# chihepiao.com
+# [http://chihepiao.com](http://chihepiao.com)
 
 ### install
 
@@ -6,13 +6,13 @@
 yarn
 ```
 
-### start
+### start static dev server
 
 ```shell
 yarn start
 ```
 
-### build
+### build static assets
 
 ```shell
 yarn build
